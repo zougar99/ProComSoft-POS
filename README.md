@@ -1,4 +1,4 @@
-# 🏪 ProComSoft POS - نظام إدارة المبيعات
+# 🏪 ProComSoft POS - Desktop Application
 
 > **Point of Sale** desktop application with AI-powered analytics, built with Python & PyQt5.
 
@@ -9,261 +9,241 @@
 
 ---
 
-## ✨ المميزات / Features
+## ✨ Features
 
-### 🛒 نظام نقاط البيع (POS)
-| الميزة | Feature |
-|--------|---------|
-| ✅ بحث سريع عن المنتجات | Fast product search with auto-filter |
-| ✅ إضافة منتجات إلى السلة بنقرة مزدوجة | Double-click to add to cart |
-| ✅ خصم يدوي على الفاتورة | Manual discount per invoice |
-| ✅ ضريبة تلقائية (20%) | Automatic 20% tax calculation |
-| ✅ طرق دفع متعددة (نقدي، بطاقة، شيك، تحويل) | Multiple payment methods |
-| ✅ إدارة المخزون تلقائياً | Auto inventory deduction on sale |
+### 🛒 Point of Sale (POS)
+| Feature | Description |
+|---------|------------|
+| ✅ Fast product search | Real-time auto-filter while typing |
+| ✅ Double-click to cart | Quick product addition |
+| ✅ Manual discount | Per-invoice discount input |
+| ✅ Auto tax calculation | 20% tax on subtotal |
+| ✅ Multiple payments | Cash, Card, Check, Transfer |
+| ✅ Auto inventory | Stock deducted on sale |
 
-### 👥 إدارة العملاء (CRM)
-- إضافة، تعديل، حذف العملاء مع كود تلقائي (`CUST-00001`)
-- معلومات كاملة: الاسم، البريد، الهاتف، العنوان، المدينة
-- تتبع الرصيد والحد الائتماني
-- بحث وتصفية
+### 👥 Customer Management (CRM)
+- Full CRUD with auto code generation (`CUST-00001`)
+- Complete profile: name, email, phone, address, city
+- Balance and credit limit tracking
+- Search and filter
 
-### 📦 إدارة المنتجات
-- أسماء متعددة اللغات (عربي / فرنسي / إنجليزي)
-- كود تلقائي (`PROD-00001`) وباركود
-- فئات المنتجات والوحدات
-- تتبع المخزون مع حد أدنى وأقصى
-- أسعار الشراء والبيع والضريبة
+### 📦 Product Management
+- Multi-language names
+- Auto code (`PROD-00001`) and barcode support
+- Categories and units
+- Min/max stock tracking
+- Buy/sell prices and tax rate
 
-### 🤖 أدوات الذكاء الاصطناعي (AI Tools)
-| الأداة | الوصف | الخوارزمية |
-|--------|-------|-----------|
-| 📈 **التنبؤ بالمبيعات** | توقع الإيرادات لـ30 يوم قادمة | Linear Regression |
-| 📊 **تحليل البيانات** | ملخص النمو، أوقات الذروة، مقارنة الفترات | Statistical Analysis |
-| 🏆 **أفضل المنتجات** | ترتيب حسب الإيرادات والكمية (آخر 90 يوم) | Aggregation |
-| ⚠️ **إعادة الطلب** | كشف المنتجات تحت الحد الأدنى | Threshold Detection |
-| 👥 **رؤى العملاء** | تحليل قيمة العملاء ومتوسط الفاتورة | RFM-like Scoring |
+### 🤖 AI Tools
+| Tool | Description | Algorithm |
+|------|-------------|-----------|
+| 📈 **Sales Forecast** | Predict revenue for next 30 days | Linear Regression |
+| 📊 **Data Analysis** | Growth summary, peak hours | Statistical Analysis |
+| 🏆 **Top Products** | Rank by revenue (last 90 days) | Aggregation |
+| ⚠️ **Reorder** | Detect low-stock products | Threshold Detection |
+| 👥 **Insights** | Customer value analysis | RFM-like Scoring |
 
-### 📊 لوحة التحكم (Dashboard)
-- بطاقات إحصائية (قيمة المخزون، الفواتير المتأخرة، الطلبات)
-- رسوم بيانية تفاعلية مع **matplotlib**
-- جدول الفواتير المتأخرة
-- قسم AI كامل مع 5 أدوات ذكية
-
-### 🌐 دعم اللغات
-- 🇸🇦 العربية (افتراضي)
-- 🇬🇧 English
-- 🇫🇷 Français
+### 📊 Dashboard
+- Real-time metric cards (stock value, overdue invoices, orders)
+- Interactive matplotlib charts
+- Overdue invoices table
+- Full AI section with 5 smart tools
 
 ---
 
-## 🚀 كيفية التشغيل / Quick Start
+## 🚀 Quick Start
 
-### المتطلبات / Prerequisites
+### Prerequisites
 - Python 3.10+
-- pip (مدير الحزم)
+- pip
 
-### التثبيت والتشغيل
+### Setup
 ```bash
-# 1. استنساخ المشروع
-git clone https://github.com/your-org/POS-Desktop-App.git
+# 1. Clone the project
+git clone https://github.com/zougar99/ProComSoft-POS.git
 cd POS-Desktop-App
 
-# 2. تثبيت المتطلبات
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. تشغيل التطبيق
+# 3. Run the app
 python main.py
 ```
 
-### بيانات الدخول الافتراضية
-| الحقل | القيمة |
-|-------|--------|
-| 👤 اسم المستخدم | `admin` |
-| 🔑 كلمة المرور | `admin123` |
-| 🎭 الصلاحية | Administrator |
+### Default Login
+| Field | Value |
+|-------|-------|
+| 👤 Username | `admin` |
+| 🔑 Password | `admin123` |
+| 🎭 Role | Administrator |
 
 ---
 
-## 📁 هيكل المشروع / Project Structure
+## 📁 Project Structure
 
 ```
 POS-Desktop-App/
 │
-├── 🚀 main.py                      # نقطة الدخول الرئيسية
-├── 📦 requirements.txt             # المكتبات المطلوبة
-├── 📖 README.md                    # هذا الملف
+├── 🚀 main.py                      # Entry point
+├── 📦 requirements.txt             # Dependencies
+├── 📖 README.md                    # This file
 │
-├── 🐍 python_app/                  # الكود المصدري
+├── 🐍 python_app/                  # Source code
+│   ├── 🗄️ database/
+│   │   ├── init.py                 # Connection singleton
+│   │   └── schema.py              # 20 tables DDL
 │   │
-│   ├── 🗄️ database/                # طبقة قاعدة البيانات
-│   │   ├── __init__.py
-│   │   ├── init.py                 # إدارة الاتصال (Singleton)
-│   │   └── schema.py               # إنشاء 20 جدول (DDL)
+│   ├── 🛠️ services/
+│   │   ├── auth_service.py         # Login + JWT
+│   │   ├── user_service.py         # User management
+│   │   ├── product_service.py      # Product CRUD
+│   │   ├── customer_service.py     # Customer CRUD
+│   │   ├── sale_service.py         # Sales + inventory
+│   │   ├── dashboard_service.py    # Analytics
+│   │   └── ai_service.py           # 🤖 AI tools
 │   │
-│   ├── 🛠️ services/                # منطق الأعمال
-│   │   ├── auth_service.py         # تسجيل الدخول + JWT
-│   │   ├── user_service.py         # إدارة المستخدمين
-│   │   ├── product_service.py      # إدارة المنتجات
-│   │   ├── customer_service.py     # إدارة العملاء
-│   │   ├── sale_service.py         # المبيعات + المخزون
-│   │   ├── dashboard_service.py    # إحصائيات لوحة التحكم
-│   │   └── ai_service.py           # 🤖 أدوات الذكاء الاصطناعي
+│   ├── 🖥️ ui/
+│   │   ├── login_window.py         # 🔐 Login
+│   │   ├── main_window.py          # 🏠 Main window
+│   │   ├── pos_window.py           # 🛒 POS checkout
+│   │   ├── customers_window.py     # 👥 Customer mgmt
+│   │   └── dashboard_window.py     # 📊 Dashboard
 │   │
-│   ├── 🖥️ ui/                      # واجهة المستخدم (PyQt5)
-│   │   ├── login_window.py         # 🔐 نافذة تسجيل الدخول
-│   │   ├── main_window.py          # 🏠 النافذة الرئيسية
-│   │   ├── pos_window.py           # 🛒 نقطة البيع
-│   │   ├── customers_window.py     # 👥 إدارة العملاء
-│   │   └── dashboard_window.py     # 📊 لوحة التحكم + رسوم بيانية
+│   ├── 📂 modules/
+│   │   ├── sales/invoices.py       # 📄 Invoices
+│   │   ├── crm/customers.py        # 👤 Customers
+│   │   └── inventory/products.py   # 📦 Products
 │   │
-│   ├── 📂 modules/                  # وحدات القائمة الرئيسية
-│   │   ├── sales/
-│   │   │   └── invoices.py         # 📄 فواتير المبيعات
-│   │   ├── crm/
-│   │   │   └── customers.py        # 👤 العملاء
-│   │   └── inventory/
-│   │       └── products.py         # 📦 المنتجات
-│   │
-│   └── 🔧 utils/                    # أدوات مساعدة
-│       ├── config.py               # الإعدادات
-│       ├── i18n.py                 # 🌐 الترجمة (AR/EN/FR)
-│       ├── security.py             # 🛡️ التوثيق
-│       └── helpers.py              # 🔍 التحقق والتنسيق
+│   └── 🔧 utils/
+│       ├── config.py               # Settings
+│       ├── i18n.py                 # 🌐 i18n
+│       ├── security.py             # 🛡️ Auth helper
+│       └── helpers.py              # 🔍 Validators
 │
-├── 📂 data/                        # 🗄️ قاعدة البيانات (تُنشأ تلقائياً)
-├── 📂 src/                         # (مشروع React قيد التطوير)
-└── 📂 electron/                    # (تطبيق Electron قيد التطوير)
+└── 📂 data/                        # SQLite DB (auto)
 ```
 
 ---
 
-## 🗄️ قاعدة البيانات / Database Schema
-
-20 جدول في SQLite:
-
-| الجدول | الوصف |
-|--------|-------|
-| `users` | المستخدمين والصلاحيات |
-| `customers` | العملاء |
-| `products` | المنتجات |
-| `categories` | فئات المنتجات |
-| `warehouses` | المستودعات |
-| `inventory_stock` | المخزون |
-| `inventory_movements` | حركات المخزون |
-| `sales` | فواتير المبيعات |
-| `sale_items` | بنود الفواتير |
-| `invoices` | الفواتير |
-| `quotes` | عروض الأسعار |
-| `quote_items` | بنود عروض الأسعار |
-| `suppliers` | الموردين |
-| `projects` | المشاريع |
-| `project_followups` | متابعات المشاريع |
-| `agenda_events` | الأحداث والمواعيد |
-| `customer_addresses` | عناوين العملاء |
-| `pricing_tariffs` | تعريفات الأسعار |
-| `pricing_tariff_items` | بنود التعريفات |
-| `audit_logs` | سجل التدقيق |
-
----
-
-## 🤖 API Reference - AI Service
+## 🤖 AI Service API
 
 ```python
 from services.ai_service import AIService
 
-# 📈 توقع الإيرادات لـ30 يوم
+# 📈 Forecast revenue
 result = AIService.sales_forecast(days=30)
-# Returns: { forecast_days, total_forecast, avg_daily_forecast, trend, confidence }
+# { forecast_days, total_forecast, avg_daily_forecast, trend, confidence }
 
-# 🏆 أفضل 10 منتجات مبيعاً
+# 🏆 Top products
 result = AIService.get_top_products(limit=10)
-# Returns: [{ id, code, name, total_qty, total_revenue, sale_count }]
+# [{ id, code, name, total_qty, total_revenue, sale_count }]
 
-# ⏰ تحليل أوقات الذروة
+# ⏰ Peak hours analysis
 result = AIService.analyze_peak_hours()
-# Returns: [{ hour, count, revenue }]
+# [{ hour, count, revenue }]
 
-# 👥 رؤى العملاء
+# 👥 Customer insights
 result = AIService.get_customer_insights()
-# Returns: [{ id, code, name, order_count, total_spent, avg_order_value }]
+# [{ id, code, name, order_count, total_spent, avg_order_value }]
 
-# ⚠️ اقتراح إعادة الطلب
+# ⚠️ Reorder suggestions
 result = AIService.suggest_reorder_products()
-# Returns: [{ id, code, name, current_stock, min_stock, monthly_sales }]
+# [{ id, code, name, current_stock, min_stock, monthly_sales }]
 
-# 📊 ملخص المبيعات مع النمو
+# 📊 Sales summary
 result = AIService.get_sales_summary()
-# Returns: { current, previous, growth_percent }
+# { current, previous, growth_percent }
 ```
 
 ---
 
-## 🛠️ التطوير / Development
+## 🗄️ Database Tables (20)
 
-### إضافة وحدة جديدة
-1. أنشئ الخدمة في `python_app/services/`
-2. أضف الواجهة في `python_app/ui/`
-3. سجل الوحدة في `python_app/modules/`
-4. أضف الجدول في `python_app/database/schema.py`
+| Table | Description |
+|-------|-------------|
+| `users` | User accounts & roles |
+| `customers` | Customers |
+| `products` | Products |
+| `categories` | Categories |
+| `warehouses` | Warehouses |
+| `inventory_stock` | Stock |
+| `inventory_movements` | Stock movements |
+| `sales` | Sales invoices |
+| `sale_items` | Invoice items |
+| `invoices` | Invoices |
+| `quotes` | Quotes |
+| `quote_items` | Quote items |
+| `suppliers` | Suppliers |
+| `projects` | Projects |
+| `project_followups` | Project follow-ups |
+| `agenda_events` | Calendar events |
+| `customer_addresses` | Customer addresses |
+| `pricing_tariffs` | Price tariffs |
+| `pricing_tariff_items` | Tariff items |
+| `audit_logs` | Audit trail |
 
-### إضافة لغة جديدة
-1. أضف الترجمة في `python_app/utils/i18n.py`
-2. أضف المفتاح لكل اللغات الموجودة
+---
 
-### أوامر مفيدة
+## 🛠️ Development
+
+### Add a new module
+1. Create service in `python_app/services/`
+2. Create UI in `python_app/ui/`
+3. Register in `python_app/modules/`
+4. Add table to `python_app/database/schema.py`
+
+### Add a new language
+1. Add translations in `python_app/utils/i18n.py`
+2. Add key for all existing languages
+
+### Useful commands
 ```bash
-# تشغيل مع إظهار الأخطاء
+# Run with debug output
 python main.py 2>&1
 
-# مسح قاعدة البيانات وإعادة الإنشاء
-rm -rf data/ && python main.py
-
-# تشغيل في وضع بدون واجهة (اختبار)
-python -c "import sys; sys.path.insert(0, 'python_app'); from database.init import init_database; init_database(); print('OK')"
-```
-
----
-
-## ❓ الأسئلة الشائعة / FAQ
-
-### ❔ لا يشتغل التطبيق؟
-```bash
-pip install -r requirements.txt
-python main.py
-```
-تأكد أنك في المجلد الصحيح (`POS-Desktop-App/`).
-
-### ❔ الخطأ: `No module named 'PyQt5'`
-```bash
-pip install PyQt5
-```
-
-### ❔ نسيت كلمة السر؟
-امسح المجلد `data/` وأعد تشغيل التطبيق:
-```bash
+# Reset database
 Remove-Item -Recurse -Force data/  # Windows
 rm -rf data/                        # Linux/Mac
 python main.py
 ```
-يعود الـ admin الافتراضي: `admin` / `admin123`
-
-### ❔ كيف نضيف منتجات؟
-1. سجل الدخول بـ `admin` / `admin123`
-2. افتح **📦 المنتجات** من القائمة
-3. استخدم خدمة `ProductService.create()`
 
 ---
 
-## 📜 الرخصة / License
+## ❓ FAQ
 
-MIT License - استخدم، عدل، ووزع بحرية.
+### ❔ App won't start?
+```bash
+pip install -r requirements.txt
+python main.py
+```
+Make sure you're in the `POS-Desktop-App/` directory.
+
+### ❔ `No module named 'PyQt5'`?
+```bash
+pip install PyQt5
+```
+
+### ❔ Forgot password?
+Delete `data/` folder and restart:
+```bash
+Remove-Item -Recurse -Force data/  # Windows
+python main.py
+```
+Default admin is restored: `admin` / `admin123`
+
+### ❔ How to add products?
+1. Login as `admin` / `admin123`
+2. Open **📦 Products** from menu
+3. Use `ProductService.create()`
 
 ---
 
-<div dir="rtl">
+## 📜 License
 
-## 🤝 المساهمة / Contributing
+MIT License - Free to use, modify, and distribute.
 
-نرحب بالمساهمات! يرجى فتح **Issue** أو **Pull Request**.
+---
 
-</div>
+## 🤝 Contributing
+
+Pull requests and issues are welcome!
